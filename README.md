@@ -2,9 +2,9 @@
 
 ## Overview
 
-This MATLAB package contains tools to read and write HDF5 files. HDF5 files are performant, and supported in many programming languages. For more information on the specifics of HDF5 files, visit the [HDF Group website](https://www.hdfgroup.org/solutions/hdf5/). To gain insight into the contents of specific HDF5 files, the HDF Group provides a useful tool called [HDFView](https://www.hdfgroup.org/downloads/hdfview/).
+This repository contains tools to read and write HDF5 files. HDF5 files are a performant tool for storing scientific data, and are supported in many programming languages. For more information on the specifics of HDF5 files, visit the [HDF Group website](https://www.hdfgroup.org/solutions/hdf5/). To gain insight into the contents of specific HDF5 files, the HDF Group provides a useful tool called [HDFView](https://www.hdfgroup.org/downloads/hdfview/).
 
-This repository includes tools for reading and writing at the file, group, attribute, and dataset levels. These tools allow the user to write powerful serialization/deserialization methods in MATLAB. It aims to be a bit easier to use than Mathworks' implementations.
+This MATLAB package includes tools for reading and writing at the file, group, attribute, and dataset levels. These tools allow the user to write powerful serialization/deserialization methods in MATLAB. It aims to be a bit easier to use than Mathworks' implementations.
 
 To install this package, clone the repository on your machine and add the src/ folder to your MATLAB path.
 

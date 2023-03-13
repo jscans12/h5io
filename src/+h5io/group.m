@@ -1,4 +1,4 @@
-classdef group < sd_toolbox.h5io.base
+classdef group < h5io.base
 %GROUP Link to HDF5 group
     properties (Dependent)
         %GROUP_NAMES Names of groups stored in this object
@@ -32,7 +32,7 @@ classdef group < sd_toolbox.h5io.base
             for i = 0:num_objs-1
                 if H5G.get_objtype_by_idx(this.objID,i) == 0
                     name = H5G.get_objname_by_idx(this.objID,i);
-                    group = sd_toolbox.h5io.group(this.objID,name);
+                    group = h5io.group(this.objID,name);
                     if isempty(groups)
                         groups = group;
                     else
@@ -47,7 +47,7 @@ classdef group < sd_toolbox.h5io.base
             for i = 0:num_objs-1
                 if H5G.get_objtype_by_idx(this.objID,i) == 1
                     name = H5G.get_objname_by_idx(this.objID,i);
-                    dataset = sd_toolbox.h5io.dataset(this.objID,name);
+                    dataset = h5io.dataset(this.objID,name);
                     if isempty(datasets)
                         datasets = dataset;
                     else

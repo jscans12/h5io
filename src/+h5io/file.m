@@ -1,4 +1,4 @@
-classdef file < sd_toolbox.h5io.group
+classdef file < h5io.group
 %FILE Access to an HDF5 file
     properties (Dependent)
         %FILESIZE File size in bytes
@@ -113,7 +113,7 @@ classdef file < sd_toolbox.h5io.group
         end
         function print_contents(this)
             fprintf('File: %s\n',this.filename);
-            print_contents@sd_toolbox.h5io.group(this);
+            print_contents@h5io.group(this);
         end
     end
 end

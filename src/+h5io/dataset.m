@@ -1,4 +1,4 @@
-classdef dataset < sd_toolbox.h5io.base
+classdef dataset < h5io.base
 %DATASET dataset access for HDF5 file    
     properties
         %DIMS Matrix dimensions

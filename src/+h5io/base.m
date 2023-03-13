@@ -183,16 +183,16 @@ classdef base < handle
             switch (attr_class)
                 
                 case H5T_ENUM
-                    attr_val = sd_toolbox.h5io.base.h5postprocessenums(attr_type,attr_space,raw_attr_val);
+                    attr_val = h5io.base.h5postprocessenums(attr_type,attr_space,raw_attr_val);
                 
                 case H5T_OPAQUE
-                    attr_val = sd_toolbox.h5io.base.h5postprocessopaques(attr_type,attr_space,raw_attr_val);
+                    attr_val = h5io.base.h5postprocessopaques(attr_type,attr_space,raw_attr_val);
                 
                 case H5T_STRING
-                    attr_val = sd_toolbox.h5io.base.h5postprocessstrings(attr_type,attr_space,raw_attr_val);
+                    attr_val = h5io.base.h5postprocessstrings(attr_type,attr_space,raw_attr_val);
                 
                 case H5T_REFERENCE
-                    attr_val = sd_toolbox.h5io.base.h5postprocessreferences(attr_id,attr_space,raw_attr_val);
+                    attr_val = h5io.base.h5postprocessreferences(attr_id,attr_space,raw_attr_val);
                 
                 otherwise
                     attr_val = raw_attr_val;

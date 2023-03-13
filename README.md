@@ -34,3 +34,32 @@ Create a dataset within my_group, call it eye_3 and give it a value of a 3x3 ide
 ```Matlab
 my_group_obj.add_dataset('eye_3',eye(3));
 ```
+
+## Read Examples
+
+Open the file created above for reading
+
+```Matlab
+filename = fullfile(cd,'my_h5.hdf5');
+my_h5_obj = h5io.file(filename,'r');
+```
+
+Display list of group names, create object with the 'my_group' group
+
+```Matlab
+disp(my_h5_obj.group_names);
+my_group_obj = my_h5_obj.get_group('my_group');
+```
+
+Display the value of the 'my_attribute' attribute
+
+```Matlab
+disp(my_group_obj.attributes.my_attribute);
+```
+
+Display list of dataset names, display the value of the 'eye_3' dataset
+
+```Matlab
+disp(my_group_obj.dataset_names);
+disp(my_group_obj.get_dataset('eye_3').get_data);
+```
